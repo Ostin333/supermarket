@@ -111,7 +111,7 @@ document.querySelector('#form-bill').onclick = function () {
     column.innerHTML += `<td></td>`;
     column.innerHTML += `<td></td>`;
     column.innerHTML += `<td></td>`;
-    column.innerHTML += `<td>${finalSum}$</td>`;
+    column.innerHTML += `<td>${finalSum.toFixed(2)}$</td>`;
     table.appendChild(column);
 
     onlyOneBill = true;
