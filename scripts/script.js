@@ -88,8 +88,19 @@ for (var i = 0; i < weightInput.length; i++) {
 }
 
 document.querySelector('#remove-item').onclick = function () {
+    if (onlyOneBill == true) {
+        alert('You have a bill, please reload the page.');
+        return;
+    }
+
     if (billSum.length != 0) {
         billSum.pop();
+        var table = document.querySelector('tbody');
+        table.removeChild(table.lastChild);
+        if (billSum.length == 0) {
+            document.querySelector('table').style.display = 'none';
+        }
+        rowNumber--;
     }
 }
 
